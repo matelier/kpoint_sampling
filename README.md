@@ -9,3 +9,11 @@ To start the slide show:
 Edit the [slides.md](./slides.md) to see the changes.
 
 Learn more about Slidev on [documentations](https://sli.dev/).
+
+## 公開中
+
+[k点分割とは何か](https://matelier.github.io/kpoint_sampling/)
+
+```
+npm run build -- --base /kpoint_sampling/ --out docs
+```
