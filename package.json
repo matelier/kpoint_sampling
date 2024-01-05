@@ -1,5 +1,6 @@
 {
   "name": "kpoint_sampling",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "slidev build",
@@ -7,8 +8,8 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.40.14",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/cli": "^0.46.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest"
   }
 }

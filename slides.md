@@ -147,8 +147,7 @@ k点分割により、波長を離散化する”稠密さ”を調整する。
 - 周期境界での位相変化を許すと、任意の細かさ（波長）の波を取り扱うことができます。
   - 平面波の波長が<span class="green">稠密</span>であれば、波動関数記述精度は向上します。
 
-<div class="grid grid-cols-[25%,25%,50%] gap-2"> <div>
-
+<div class="grid grid-cols-[25%_25%_50%]"> <div>
 <img class="h-70" src="/images/pw.svg">
 
 </div> <div>
@@ -181,7 +180,7 @@ k点分割により、波長を離散化する”稠密さ”を調整する。
 
 $k$を用いて、電子の状態を指定する。
 
-<div class="grid grid-cols-[62%,1fr] gap-4"> <div>
+<div class="grid grid-cols-[63%_1fr] gap-4"> <div>
 
 - 通常の（特別に高精度ではない；一体の）ハミルトニアン$\mathcal{H}$は、異なる$k$と$k'$の間に要素を持ちません。
 
