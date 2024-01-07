@@ -146,17 +146,18 @@ k点分割により、波長を離散化する”稠密さ”を調整する。
   - 電子波動関数の記述に参画する平面波の波長が<span class="orange">飛び飛び</span>であれば、計算精度は低下します。
 - 周期境界での位相変化を許すと、任意の細かさ（波長）の波を取り扱うことができます。
   - 平面波の波長が<span class="green">稠密</span>であれば、波動関数記述精度は向上します。
+- 位相変化を許さなくても、実格子が大きくなると、平面波の波長が<span class="green">稠密</span>になります。
 
 <div class="grid grid-cols-[25%_25%_50%]"> <div>
-<img class="h-70" src="/images/pw.svg">
+<img class="h-60" src="/images/pw.svg">
 
 </div> <div>
 
-<img v-click class="h-70" src="/images/pw_pi.svg">
+<img v-click class="h-60" src="/images/pw_pi.svg">
 
 </div> <div>
 
-<img v-click class="h-70" src="/images/double.svg">
+<img v-click class="h-60" src="/images/double.svg">
 
 </div> </div>
 
@@ -182,11 +183,19 @@ $k$を用いて、電子の状態を指定する。
 
 <div class="grid grid-cols-[63%_1fr] gap-4"> <div>
 
+- $k$には**運動量**という意味があります。
+
+$$
+p = \hbar k
+$$
+
 - 通常の（特別に高精度ではない；一体の）ハミルトニアン$\mathcal{H}$は、異なる$k$と$k'$の間に要素を持ちません。
+  - 並進対称性がある系では、運動量が保存します；一体のハミルトニアンでは、一電子状態の運動量が保存します。
 
 $$
 <k m | \mathcal{H} | k' n> = \delta_{k, k'} H_{kmn}
 $$
+
 
 - $k$を指標にして、電子状態を分類できます。
   - ”k点並列は実行効率が良い”ことにもつながります。
@@ -212,7 +221,8 @@ $$
 - k点分割により、基底関数の、離散化された波長の稠密さを調整します。
   - k点分割は、計算精度に影響を及ぼします。
   - k点分割数を実格子長さに反比例させると、波長離散化の度合いが同等になります。
-- kは状態を指定する指標として、物理現象の解釈に役立つ意味を持ちます。
+    - 実格子を$n$倍すると、k点分割数を$\frac{1}{n}$倍して等価な計算精度です。
+- $\hbar k$は運動量であり、物理現象の解釈に役立ちます。
 
 <style>
 h1 {
