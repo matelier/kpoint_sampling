@@ -1,0 +1,1 @@
+import{o as s,b as t,f as o}from"../modules/vue-Dd4cOx9T.js";import{b as l}from"../index-KhvaAkgB.js";const a={},n={class:"slidev-layout default"};function r(e,c){return s(),t("div",n,[o(e.$slots,"default")])}const _=l(a,[["render",r],["__file","/Users/usami/matelier/slidev/kpoint_sampling/node_modules/@slidev/client/layouts/default.vue"]]);export{_ as I};
