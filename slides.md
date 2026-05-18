@@ -1,18 +1,23 @@
 ---
 # try also 'default' to start simple
 theme: seriph
-#theme: default
-colorSchema: 'dark'
+# theme: default
+colorSchema: "dark"
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://cover.sli.dev
 # apply any windi css classes to the current slide
-class: 'text-center'
+class: "text-center"
 # download : true
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
+# hide outline/table of contents
+outline: false
+ui:
+  outline: false
+hideInPresentation: true
 # some information about the slides, markdown enabled
 info: |
   What is k-point sampling
@@ -25,14 +30,13 @@ transition: fade-out
 #css: unocss
 fonts:
   # basically the text
-  sans: 'Robot'
+  sans: "Roboto"
   # use with `font-serif` css class from windicss
-  serif: 'Robot Slab'
+  serif: "Roboto Slab"
   # for code blocks, inline code, etc.
-  mono: 'Fira Code'
+  mono: "Fira Code"
   italic: false
   fallback: false
-
 ---
 
 # k点分割とは何か
@@ -45,11 +49,11 @@ fonts:
 
 - 主に固体物理分野で利用される第一原理計算では、**k点分割**（サンプリング）を指定します。
   - ”逆格子空間（ブリルアンゾーン）の分割”のように説明されます。
-  この内容は正しいですが、逆格子空間に馴染みのない人に向けては、説明になっていません。
+    この内容は正しいですが、逆格子空間に馴染みのない人に向けては、説明になっていません。
 - 第一原理計算の利用に際して、”逆格子空間”の理解は必須ではありません。逆格子空間を持ち出さずに、k点分割を説明します。
   - ”ブロッホの定理”は登場しません。
   - とは言っても、**逆格子空間**や**ブロッホの定理**は固体物理学における重要な基礎概念です。
-  第一原理計算の深い理解のためには（後追いで）学習することをお勧めします。
+    第一原理計算の深い理解のためには（後追いで）学習することをお勧めします。
 
 <style>
 h1 {
@@ -82,9 +86,9 @@ $$
 - 複素数を用いた波の表現、重ね合わせ
   - $A_m$：複素数（位相成分を含みます）
   - $b_m$：実数
-$$
-f(x) = \sum_m A_m \exp(i b_m x)
-$$
+    $$
+    f(x) = \sum_m A_m \exp(i b_m x)
+    $$
 
 ---
 
@@ -196,7 +200,6 @@ $$
 <k m | \mathcal{H} | k' n> = \delta_{k, k'} H_{kmn}
 $$
 
-
 - $k$を指標にして、電子状態を分類できます。
   - ”k点並列は実行効率が良い”ことにもつながります。
 
@@ -245,9 +248,12 @@ h1 {
 # 補足：$\bm{k}$と$\bm{G}$
 
 Fourier変換の式：一旦、電子状態計算を忘れます。
+
 $$
 f(x) = \int F(k) \exp (i k x) dk
 $$
+
 変数$k$を使って説明されることが多いですが、k点分割とは無関係です。
+
 - 第一原理電子状態計算では、平面波の足し合わせ（積分）に$\bm{G}$を使います（慣例）。
 - PHASE/0三次元並列版のG並列は、この$\bm{G}$での並列です。
