@@ -12,5 +12,10 @@
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.5.33"
+  },
+  "overrides": {
+    "dompurify": "^3.4.17",
+    "image-size": "^2.0.3",
+    "katex": "^0.18.2"
   }
 }
